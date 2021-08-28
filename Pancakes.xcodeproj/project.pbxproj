@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		EAD8157F26DAC73C0053CF6C /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8157E26DAC73C0053CF6C /* RecipeTableViewController.swift */; };
 		EAD8158126DAC74F0053CF6C /* SavedRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8158026DAC74F0053CF6C /* SavedRecipeTableViewController.swift */; };
 		EAD8158326DAC77F0053CF6C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8158226DAC77F0053CF6C /* WebViewController.swift */; };
+		EAD8158626DAE8AB0053CF6C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8158526DAE8AB0053CF6C /* Alert.swift */; };
+		EAD8158926DAEA5A0053CF6C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = EAD8158826DAEA5A0053CF6C /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,7 @@
 		EAD8157E26DAC73C0053CF6C /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		EAD8158026DAC74F0053CF6C /* SavedRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipeTableViewController.swift; sourceTree = "<group>"; };
 		EAD8158226DAC77F0053CF6C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		EAD8158526DAE8AB0053CF6C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD8158926DAEA5A0053CF6C /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +68,7 @@
 		EAD8155F26DABCD60053CF6C /* Pancakes */ = {
 			isa = PBXGroup;
 			children = (
+				EAD8158426DAE89A0053CF6C /* Extension */,
 				EAD8157B26DAC0FF0053CF6C /* Delegate */,
 				EAD8157C26DAC1060053CF6C /* Controller */,
 				EAD8157D26DAC1110053CF6C /* View */,
@@ -103,6 +108,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EAD8158426DAE89A0053CF6C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EAD8158526DAE8AB0053CF6C /* Alert.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +132,9 @@
 			dependencies = (
 			);
 			name = Pancakes;
+			packageProductDependencies = (
+				EAD8158826DAEA5A0053CF6C /* SwiftyJSON */,
+			);
 			productName = Pancakes;
 			productReference = EAD8155D26DABCD60053CF6C /* Pancakes.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +162,9 @@
 				Base,
 			);
 			mainGroup = EAD8155426DABCD60053CF6C;
+			packageReferences = (
+				EAD8158726DAEA5A0053CF6C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = EAD8155E26DABCD60053CF6C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -179,6 +198,7 @@
 				EAD8156326DABCD60053CF6C /* SceneDelegate.swift in Sources */,
 				EAD8158326DAC77F0053CF6C /* WebViewController.swift in Sources */,
 				EAD8156B26DABCD60053CF6C /* Pancakes.xcdatamodeld in Sources */,
+				EAD8158626DAE8AB0053CF6C /* Alert.swift in Sources */,
 				EAD8157F26DAC73C0053CF6C /* RecipeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EAD8158726DAEA5A0053CF6C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EAD8158826DAEA5A0053CF6C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAD8158726DAEA5A0053CF6C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		EAD8156926DABCD60053CF6C /* Pancakes.xcdatamodeld */ = {

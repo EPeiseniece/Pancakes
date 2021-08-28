@@ -21,17 +21,14 @@ class RecipeTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -39,7 +36,6 @@ class RecipeTableViewController: UITableViewController {
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -86,4 +82,20 @@ class RecipeTableViewController: UITableViewController {
     }
     */
 
+    
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let vc = storyboard.instantiateViewController(identifier: "WebViewController") as? WebViewController else {
+            return
+        }
+//        let item = items[indexPath.row]
+//        vc.contentString = item.desciption
+//        vc.titleString = item.title
+//        vc.webURLString = item.url
+//        vc.newsImage = item.image
+        
+ //       present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
+

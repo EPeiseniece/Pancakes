@@ -23,9 +23,9 @@ class PancakeProportionsViewController: UIViewController {
     
     @IBOutlet weak var pancakeSlider: UISlider!{
         didSet{
-            pancakeSlider.maximumValue = 21
+            pancakeSlider.maximumValue = 24
             pancakeSlider.minimumValue = 0
-            pancakeSlider.value = 7
+            pancakeSlider.value = 8
         }
         
     }
@@ -119,5 +119,15 @@ class PancakeProportionsViewController: UIViewController {
         
         return (flour, eggs, milk, water, sugar, salt, oil)
     }
+    
+    
+    @IBAction func infoButtonTapped(_ sender: Any) {
+        basicAlert(title: "Calculate materials", message: "By using the slider you can see how much of baking materials you will need for tasty pancakes. To change measurements, click on the specific segment below.")
+    }
+    
+    
 }
+
+
+
 
