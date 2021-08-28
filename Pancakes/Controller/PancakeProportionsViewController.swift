@@ -46,6 +46,9 @@ class PancakeProportionsViewController: UIViewController {
     
     
     func updateLabelsForSlider (value:Float){
+        //assigning values for labels based on picked segment
+        
+        
         let pancakeCount = Int(value)
         pancakeNumberLabel.text = "\(pancakeCount) pancakes"
         var flourString = ""
@@ -89,28 +92,29 @@ class PancakeProportionsViewController: UIViewController {
     
     
     func convertIngredientsFromCups(pancakeCount: Int) -> (flour: Double, eggs: Double, milk: Double, water: Double, sugar: Double, salt: Double, oil:Double){
-        
-        let flour = (Double(pancakeCount)/7*1.5)
-        let eggs = (Double(pancakeCount)/7*2)
-        let milk = (Double(pancakeCount)/7)
-        let water = (Double(pancakeCount)/7)
-        let sugar = (Double(pancakeCount)/7*2)
-        let salt = (Double(pancakeCount)/7*0.5)
-        let oil = (Double(pancakeCount)/7*2)
+        //converts into cups proportionally
+        let flour = (Double(pancakeCount)/8*1.5)
+        let eggs = (Double(pancakeCount)/8*2)
+        let milk = (Double(pancakeCount)/8)
+        let water = (Double(pancakeCount)/8)
+        let sugar = (Double(pancakeCount)/8*2)
+        let salt = (Double(pancakeCount)/8*0.5)
+        let oil = (Double(pancakeCount)/8*2)
         
         
         return (flour, eggs, milk, water, sugar, salt, oil)
     }
     
     func convertIngredientsFromGrams(pancakeCount: Int) -> (flour: Double, eggs: Double, milk: Double, water: Double, sugar: Double, salt: Double, oil:Double){
-        
-        let flour = (Double(pancakeCount)/7*1.5*160)
-        let eggs = (Double(pancakeCount)/7*2)
-        let milk = (Double(pancakeCount)/7*240)
-        let water = (Double(pancakeCount)/7*250)
-        let sugar = (Double(pancakeCount)/7*2*25)
-        let salt = (Double(pancakeCount)/7*0.5*10)
-        let oil = (Double(pancakeCount)/7*2*17)
+        // first converts to cups and then assings specific weight to each material
+        //eggs have the same calculation because they do not come in cups but as a whole
+        let flour = (Double(pancakeCount)/8*1.5*160)
+        let eggs = (Double(pancakeCount)/8*2)
+        let milk = (Double(pancakeCount)/8*240)
+        let water = (Double(pancakeCount)/8*250)
+        let sugar = (Double(pancakeCount)/8*2*25)
+        let salt = (Double(pancakeCount)/8*0.5*10)
+        let oil = (Double(pancakeCount)/8*2*17)
         
         
         return (flour, eggs, milk, water, sugar, salt, oil)
