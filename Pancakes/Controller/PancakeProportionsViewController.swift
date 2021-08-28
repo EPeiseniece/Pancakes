@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PancakeProportionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
