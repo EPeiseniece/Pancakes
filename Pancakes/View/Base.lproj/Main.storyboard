@@ -342,7 +342,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Fxo-BV-V4g">
                                                     <rect key="frame" x="20" y="35.5" width="374" height="128"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2D-aw-bvr">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2D-aw-bvr">
                                                             <rect key="frame" x="0.0" y="0.0" width="179" height="128"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="128" id="2CG-bM-Pj9"/>
@@ -397,6 +397,21 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="780.80357142857144"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Geg-FS-QAu">
+            <objects>
+                <viewController id="4ro-Et-688" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="juZ-M8-tvv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vdy-Oi-TXc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="naI-bq-qco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888" y="781"/>
+        </scene>
         <!--Web View Controller-->
         <scene sceneID="NyM-v1-JQy">
             <objects>
@@ -429,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLl-Co-IlH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844.9275362318842" y="774.77678571428567"/>
+            <point key="canvasLocation" x="2675" y="781"/>
         </scene>
         <!--Saved Recipe Table View Controller-->
         <scene sceneID="cfc-Wv-OnH">
@@ -494,6 +509,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SmI-gy-DT3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WSN-1D-Hpv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.53611210249999997" green="0.38875780160000001" blue="0.73737124180000002" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

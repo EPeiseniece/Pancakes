@@ -11,13 +11,13 @@ import Gloss
 
 class RecipeModel: JSONDecodable{
     
-    var id: String
+    var id: Int?
     var title: String
     var image: UIImage?
     var urlToImage:String
     
     required init(json: JSON) {
-        self.id = "id" <~~ json ?? ""
+        self.id = "id" <~~ json
         self.urlToImage = "image" <~~ json ?? ""
         self.title = "title" <~~ json ?? ""
         

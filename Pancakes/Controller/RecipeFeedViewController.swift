@@ -60,7 +60,7 @@ class RecipeFeedViewController: UIViewController {
     }
     
     func populateData(_ dict: [String:Any]){
-        guard let responseDict = dict["articles"] as? [Gloss.JSON] else {
+        guard let responseDict = dict["results"] as? [Gloss.JSON] else {
             return
         }
         recipes = [RecipeModel].from(jsonArray: responseDict) ?? []
