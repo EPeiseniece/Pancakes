@@ -397,31 +397,95 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="780.80357142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="Geg-FS-QAu">
             <objects>
-                <viewController id="4ro-Et-688" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="4ro-Et-688" customClass="DetailViewController" customModule="Pancakes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="juZ-M8-tvv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Jfe-7q-Oav">
+                                <rect key="frame" x="87" y="219" width="240" height="458"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gY7-qo-wF4">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="304"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="1sO-Ps-LLT"/>
+                                            <constraint firstAttribute="height" constant="304" id="vfw-6M-fjt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJQ-tu-IDx">
+                                        <rect key="frame" x="0.0" y="342" width="240" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="IG0-RO-Nwq"/>
+                                            <constraint firstAttribute="height" constant="48" id="rat-oH-f8L"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="eOR-Y4-aAf">
+                                        <rect key="frame" x="0.0" y="428" width="240" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NT-Tj-Etm">
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="5eK-Aw-NPr"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="dkb-hM-A1Y"/>
+                                                </constraints>
+                                                <state key="normal" title="Go to recipe"/>
+                                                <connections>
+                                                    <action selector="goToWebView:" destination="4ro-Et-688" eventType="touchUpInside" id="q6V-4V-N8m"/>
+                                                    <segue destination="OGU-vu-6yC" kind="presentation" id="Vss-mw-cnK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d23-rf-ZjC">
+                                                <rect key="frame" x="156" y="0.0" width="84" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="43q-lY-vde"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="kKe-Vb-3L1"/>
+                                                </constraints>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveToFavoritesTapped:" destination="4ro-Et-688" eventType="touchUpInside" id="xyh-ZE-b7v"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vdy-Oi-TXc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jfe-7q-Oav" firstAttribute="centerY" secondItem="juZ-M8-tvv" secondAttribute="centerY" id="2mU-1S-dNt"/>
+                            <constraint firstItem="Jfe-7q-Oav" firstAttribute="centerX" secondItem="juZ-M8-tvv" secondAttribute="centerX" id="zPK-zW-CzM"/>
+                        </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="lmM-6V-c6e"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="detailImageView" destination="gY7-qo-wF4" id="c5t-LG-w84"/>
+                        <outlet property="recipeDetailTitleLabel" destination="uJQ-tu-IDx" id="gjX-DZ-r2e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naI-bq-qco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="781"/>
+            <point key="canvasLocation" x="1886.9565217391305" y="780.80357142857144"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="NyM-v1-JQy">
             <objects>
                 <viewController storyboardIdentifier="WebViewController" id="OGU-vu-6yC" customClass="WebViewController" customModule="Pancakes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XF7-gA-U49">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-g3-DUl">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-44" width="414" height="886"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>

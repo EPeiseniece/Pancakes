@@ -99,14 +99,13 @@ class RecipeFeedViewController: UIViewController {
     
  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-    guard let vc = storyboard.instantiateViewController(identifier: "WebViewController") as? WebViewController else {
+    guard let vc = storyboard.instantiateViewController(identifier: "DetailViewController") as? DetailViewController else {
         return
     }
-//        let item = items[indexPath.row]
-//        vc.contentString = item.desciption
-//        vc.titleString = item.title
-//        vc.webURLString = item.url
-//        vc.newsImage = item.image
+        let recipe = recipes[indexPath.row]
+    vc.newsImage = recipe.image
+    vc.titleString = recipe.title
+    vc.id = recipe.id!
 
 //       present(vc, animated: true, completion: nil)
     navigationController?.pushViewController(vc, animated: true)

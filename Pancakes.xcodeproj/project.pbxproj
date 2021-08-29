@@ -23,6 +23,7 @@
 		EAD8159226DC14490053CF6C /* Gloss in Frameworks */ = {isa = PBXBuildFile; productRef = EAD8159126DC14490053CF6C /* Gloss */; };
 		EAD8159626DC2AE20053CF6C /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8159526DC2AE20053CF6C /* RecipeTableViewCell.swift */; };
 		EAD8159826DC2BE40053CF6C /* RecipeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8159726DC2BE40053CF6C /* RecipeFeedViewController.swift */; };
+		EAF4C16826DC39EA0046540C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4C16726DC39EA0046540C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		EAD8158B26DBBFF50053CF6C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EAD8159526DC2AE20053CF6C /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		EAD8159726DC2BE40053CF6C /* RecipeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeedViewController.swift; sourceTree = "<group>"; };
+		EAF4C16726DC39EA0046540C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				EAD8158226DAC77F0053CF6C /* WebViewController.swift */,
 				EAD8159526DC2AE20053CF6C /* RecipeTableViewCell.swift */,
 				EAD8159726DC2BE40053CF6C /* RecipeFeedViewController.swift */,
+				EAF4C16726DC39EA0046540C /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF4C16826DC39EA0046540C /* DetailViewController.swift in Sources */,
 				EAD8156526DABCD60053CF6C /* PancakeProportionsViewController.swift in Sources */,
 				EAD8159626DC2AE20053CF6C /* RecipeTableViewCell.swift in Sources */,
 				EAD8158C26DBBFF50053CF6C /* Item.swift in Sources */,
