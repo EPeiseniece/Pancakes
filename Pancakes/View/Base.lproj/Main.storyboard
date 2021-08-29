@@ -436,8 +436,8 @@
                                                 </constraints>
                                                 <state key="normal" title="Go to recipe"/>
                                                 <connections>
+                                                    <action selector="goToWebTapped:" destination="4ro-Et-688" eventType="touchUpInside" id="W4Q-lS-n5V"/>
                                                     <action selector="goToWebView:" destination="4ro-Et-688" eventType="touchUpInside" id="q6V-4V-N8m"/>
-                                                    <segue destination="OGU-vu-6yC" kind="presentation" id="Vss-mw-cnK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d23-rf-ZjC">
@@ -446,7 +446,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="43q-lY-vde"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="kKe-Vb-3L1"/>
                                                 </constraints>
-                                                <state key="normal" title="Save"/>
+                                                <state key="normal" title="Info"/>
                                                 <connections>
                                                     <action selector="saveToFavoritesTapped:" destination="4ro-Et-688" eventType="touchUpInside" id="xyh-ZE-b7v"/>
                                                 </connections>
@@ -463,9 +463,7 @@
                             <constraint firstItem="Jfe-7q-Oav" firstAttribute="centerX" secondItem="juZ-M8-tvv" secondAttribute="centerX" id="zPK-zW-CzM"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="lmM-6V-c6e"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="detailImageView" destination="gY7-qo-wF4" id="c5t-LG-w84"/>
@@ -481,11 +479,11 @@
             <objects>
                 <viewController storyboardIdentifier="WebViewController" id="OGU-vu-6yC" customClass="WebViewController" customModule="Pancakes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XF7-gA-U49">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-g3-DUl">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="886"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -510,63 +508,6 @@
             </objects>
             <point key="canvasLocation" x="2675" y="781"/>
         </scene>
-        <!--Saved Recipe Table View Controller-->
-        <scene sceneID="cfc-Wv-OnH">
-            <objects>
-                <tableViewController id="lmu-6q-WRb" customClass="SavedRecipeTableViewController" customModule="Pancakes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iTp-3A-XuF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedRecipeCell" rowHeight="176" id="31C-kn-uE2">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="176"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="31C-kn-uE2" id="Hum-3J-iz0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="3jH-WH-Kig">
-                                            <rect key="frame" x="28" y="24" width="358" height="128"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LiI-Mt-751">
-                                                    <rect key="frame" x="0.0" y="0.0" width="153" height="128"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="4Zn-P3-HpE"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="153" id="E9k-VX-ZT1"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="11f-xv-kWc">
-                                                    <rect key="frame" x="181" y="0.0" width="177" height="128"/>
-                                                </imageView>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="3jH-WH-Kig" firstAttribute="centerX" secondItem="Hum-3J-iz0" secondAttribute="centerX" id="EbB-T7-2T3"/>
-                                        <constraint firstItem="3jH-WH-Kig" firstAttribute="leading" secondItem="Hum-3J-iz0" secondAttribute="leadingMargin" constant="8" id="SFc-FJ-0oF"/>
-                                        <constraint firstItem="3jH-WH-Kig" firstAttribute="centerY" secondItem="Hum-3J-iz0" secondAttribute="centerY" id="aB8-PK-pGI"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="lmu-6q-WRb" id="XtJ-8t-kqQ"/>
-                            <outlet property="delegate" destination="lmu-6q-WRb" id="Qtj-Pr-6AV"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="OXr-Q3-RHl">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="info.circle" catalog="system" id="qO7-zz-X8H"/>
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="1KH-ah-i5T"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8d5-OO-Dqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="1440.4017857142856"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rbl-7d-uK1">
             <objects>
@@ -582,7 +523,6 @@
                     <connections>
                         <segue destination="UFK-i0-7gE" kind="relationship" relationship="viewControllers" id="yH6-xE-Lxr"/>
                         <segue destination="FVz-o7-KMz" kind="relationship" relationship="viewControllers" id="Cec-kY-o3c"/>
-                        <segue destination="Y0q-Tc-Wfx" kind="relationship" relationship="viewControllers" id="0D3-fF-wSv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoX-VN-BbV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -608,26 +548,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VO-Jt-ilW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="213" y="781"/>
-        </scene>
-        <!--Favorites-->
-        <scene sceneID="7Wd-JV-IFe">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y0q-Tc-Wfx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" id="Dil-6n-IFN"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="io7-O0-ui1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.53611210249999997" green="0.38875780160000001" blue="0.73737124180000002" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="lmu-6q-WRb" kind="relationship" relationship="rootViewController" id="ixe-Az-9TZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="keY-Mc-neo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="1440.4017857142856"/>
         </scene>
         <!--Basic proportions-->
         <scene sceneID="26A-Rv-Jby">
@@ -655,7 +575,6 @@
         <image name="books.vertical" catalog="system" width="128" height="103"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

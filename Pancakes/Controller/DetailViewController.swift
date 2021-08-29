@@ -6,17 +6,12 @@
 //
 
 import UIKit
-import CoreData
 import Alamofire
 import SwiftyJSON
 
 
 class DetailViewController: UIViewController {
-    
-    
-    //var savedItems = [Recipes]()
-    var context: NSManagedObjectContext?
-    
+        
     var webURLString = String()
     var titleString = String()
     var newsImage: UIImage?
@@ -34,13 +29,13 @@ class DetailViewController: UIViewController {
         }else{
             self.basicAlert(title: "Something went wrong", message: "Try again with a different recipe")
         }
-        
+
     }
     }
     
     func updateURL(json: JSON){
         if let urlResult = json["sourceUrl"].string{
-            webURLString = urlResult
+            webURLString = String(urlResult)
             print(urlResult)
         }else{
             self.basicAlert(title: "Something went wrong", message: "Try again with a different recipe")
@@ -55,19 +50,33 @@ class DetailViewController: UIViewController {
 
         recipeDetailTitleLabel.text = titleString
         detailImageView.image = newsImage
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        context = appDelegate.persistentContainer.viewContext
         getURL(url: "https://api.spoonacular.com/recipes/\(id)/information", params: params)
     }
     
 
+    #warning("App crashes and does not go to web view with reason (unrecognized sender)" )
+    @IBAction func goToWebTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let vc = storyboard.instantiateViewController(identifier: "WebViewController") as? WebViewController else {
+            return
+        }
+            
+        vc.urlString = webURLString
+        
+
+    //       present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
    
-    @IBAction func goToWebView(_ sender: Any) {
-    }
     
-    @IBAction func saveToFavoritesTapped(_ sender: Any) {
-    }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let destination: WebViewController = segue.destination as! WebViewController
+//        //getURL(url: "https://api.spoonacular.com/recipes/\(id)/information", params: params)
+//        destination.urlString = "https://www.foodista.com/recipe/RHSMN38H/pancake-bites"
+//    }
     
 }

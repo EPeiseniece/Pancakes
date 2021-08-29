@@ -14,7 +14,6 @@
 		EAD8156B26DABCD60053CF6C /* Pancakes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAD8156926DABCD60053CF6C /* Pancakes.xcdatamodeld */; };
 		EAD8156D26DABCD80053CF6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAD8156C26DABCD80053CF6C /* Assets.xcassets */; };
 		EAD8157026DABCD80053CF6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD8156E26DABCD80053CF6C /* LaunchScreen.storyboard */; };
-		EAD8158126DAC74F0053CF6C /* SavedRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8158026DAC74F0053CF6C /* SavedRecipeTableViewController.swift */; };
 		EAD8158326DAC77F0053CF6C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8158226DAC77F0053CF6C /* WebViewController.swift */; };
 		EAD8158626DAE8AB0053CF6C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8158526DAE8AB0053CF6C /* Alert.swift */; };
 		EAD8158926DAEA5A0053CF6C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = EAD8158826DAEA5A0053CF6C /* SwiftyJSON */; };
@@ -36,7 +35,6 @@
 		EAD8156C26DABCD80053CF6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAD8156F26DABCD80053CF6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAD8157126DABCD80053CF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EAD8158026DAC74F0053CF6C /* SavedRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipeTableViewController.swift; sourceTree = "<group>"; };
 		EAD8158226DAC77F0053CF6C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EAD8158526DAE8AB0053CF6C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		EAD8158B26DBBFF50053CF6C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				EAD8156426DABCD60053CF6C /* PancakeProportionsViewController.swift */,
-				EAD8158026DAC74F0053CF6C /* SavedRecipeTableViewController.swift */,
 				EAD8158226DAC77F0053CF6C /* WebViewController.swift */,
 				EAD8159526DC2AE20053CF6C /* RecipeTableViewCell.swift */,
 				EAD8159726DC2BE40053CF6C /* RecipeFeedViewController.swift */,
@@ -222,7 +219,6 @@
 				EAD8159626DC2AE20053CF6C /* RecipeTableViewCell.swift in Sources */,
 				EAD8158C26DBBFF50053CF6C /* Item.swift in Sources */,
 				EAD8159826DC2BE40053CF6C /* RecipeFeedViewController.swift in Sources */,
-				EAD8158126DAC74F0053CF6C /* SavedRecipeTableViewController.swift in Sources */,
 				EAD8156126DABCD60053CF6C /* AppDelegate.swift in Sources */,
 				EAD8156326DABCD60053CF6C /* SceneDelegate.swift in Sources */,
 				EAD8158326DAC77F0053CF6C /* WebViewController.swift in Sources */,
