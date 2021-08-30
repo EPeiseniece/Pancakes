@@ -54,7 +54,7 @@ class DetailViewController: UIViewController {
     }
     
 
-    #warning("App crashes and does not go to web view with reason (unrecognized sender)" )
+    //#warning("App crashes and does not go to web view with reason (unrecognized sender)" )
     @IBAction func goToWebTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let vc = storyboard.instantiateViewController(identifier: "WebViewController") as? WebViewController else {

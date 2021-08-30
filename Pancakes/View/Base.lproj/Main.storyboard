@@ -400,7 +400,7 @@
         <!--Detail View Controller-->
         <scene sceneID="Geg-FS-QAu">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="4ro-Et-688" customClass="DetailViewController" customModule="Pancakes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" hidesBottomBarWhenPushed="YES" id="4ro-Et-688" customClass="DetailViewController" customModule="Pancakes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="juZ-M8-tvv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -437,7 +437,6 @@
                                                 <state key="normal" title="Go to recipe"/>
                                                 <connections>
                                                     <action selector="goToWebTapped:" destination="4ro-Et-688" eventType="touchUpInside" id="W4Q-lS-n5V"/>
-                                                    <action selector="goToWebView:" destination="4ro-Et-688" eventType="touchUpInside" id="q6V-4V-N8m"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d23-rf-ZjC">
@@ -447,9 +446,6 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="kKe-Vb-3L1"/>
                                                 </constraints>
                                                 <state key="normal" title="Info"/>
-                                                <connections>
-                                                    <action selector="saveToFavoritesTapped:" destination="4ro-Et-688" eventType="touchUpInside" id="xyh-ZE-b7v"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -477,7 +473,7 @@
         <!--Web View Controller-->
         <scene sceneID="NyM-v1-JQy">
             <objects>
-                <viewController storyboardIdentifier="WebViewController" id="OGU-vu-6yC" customClass="WebViewController" customModule="Pancakes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OGU-vu-6yC" customClass="WebViewController" customModule="Pancakes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XF7-gA-U49">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
