@@ -397,6 +397,68 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="780.80357142857144"/>
         </scene>
+        <!--Saved Table View Controller-->
+        <scene sceneID="V6P-af-ZgX">
+            <objects>
+                <tableViewController id="YiZ-Pv-kFq" customClass="SavedTableViewController" customModule="Pancakes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3J6-g6-Ac8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedCell" rowHeight="180" id="nPt-eq-ciP">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nPt-eq-ciP" id="qp8-ye-4Bv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="AHj-He-05q">
+                                            <rect key="frame" x="20" y="26" width="374" height="128"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MK-K5-0fO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="0kU-mF-gC3"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="178" id="J7b-eS-3TO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xPw-vu-kGu">
+                                                    <rect key="frame" x="196" y="0.0" width="178" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="O8X-Yw-1xC"/>
+                                                        <constraint firstAttribute="width" constant="178" id="stb-Et-TCD"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AHj-He-05q" firstAttribute="centerX" secondItem="qp8-ye-4Bv" secondAttribute="centerX" id="0Do-9n-PuF"/>
+                                        <constraint firstItem="AHj-He-05q" firstAttribute="centerY" secondItem="qp8-ye-4Bv" secondAttribute="centerY" id="24Z-jV-1Rt"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YiZ-Pv-kFq" id="JZd-pt-AOw"/>
+                            <outlet property="delegate" destination="YiZ-Pv-kFq" id="fuD-47-KnK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Vyt-Rz-wti">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="A0T-yS-1lm"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editButtonLabel" destination="A0T-yS-1lm" id="3Y0-3d-LGy"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgs-6f-b9U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.6666666666667" y="1453.7946428571429"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="Geg-FS-QAu">
             <objects>
@@ -445,7 +507,10 @@
                                                     <constraint firstAttribute="height" constant="30" id="43q-lY-vde"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="kKe-Vb-3L1"/>
                                                 </constraints>
-                                                <state key="normal" title="Info"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="4ro-Et-688" eventType="touchUpInside" id="1m2-eT-TWL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -519,6 +584,7 @@
                     <connections>
                         <segue destination="UFK-i0-7gE" kind="relationship" relationship="viewControllers" id="yH6-xE-Lxr"/>
                         <segue destination="FVz-o7-KMz" kind="relationship" relationship="viewControllers" id="Cec-kY-o3c"/>
+                        <segue destination="O20-Ch-r7n" kind="relationship" relationship="viewControllers" id="Ypk-DQ-V86"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoX-VN-BbV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -565,12 +631,32 @@
             </objects>
             <point key="canvasLocation" x="132" y="111"/>
         </scene>
+        <!--Favorites-->
+        <scene sceneID="tdc-7P-fBR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O20-Ch-r7n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" id="sbS-h6-gx9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7QM-uI-Z1R">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YiZ-Pv-kFq" kind="relationship" relationship="rootViewController" id="1uC-Gw-aHa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vQ-wZ-OGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="1454"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Modes" width="2848" height="4272"/>
         <image name="books.vertical" catalog="system" width="128" height="103"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

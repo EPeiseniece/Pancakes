@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EAC6933426E00687000ABDCA /* SavedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6933326E00687000ABDCA /* SavedTableViewController.swift */; };
 		EAD8156126DABCD60053CF6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8156026DABCD60053CF6C /* AppDelegate.swift */; };
 		EAD8156326DABCD60053CF6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8156226DABCD60053CF6C /* SceneDelegate.swift */; };
 		EAD8156526DABCD60053CF6C /* PancakeProportionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8156426DABCD60053CF6C /* PancakeProportionsViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EAC6933326E00687000ABDCA /* SavedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewController.swift; sourceTree = "<group>"; };
 		EAD8155D26DABCD60053CF6C /* Pancakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pancakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD8156026DABCD60053CF6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAD8156226DABCD60053CF6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				EAD8159526DC2AE20053CF6C /* RecipeTableViewCell.swift */,
 				EAD8159726DC2BE40053CF6C /* RecipeFeedViewController.swift */,
 				EAF4C16726DC39EA0046540C /* DetailViewController.swift */,
+				EAC6933326E00687000ABDCA /* SavedTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC6933426E00687000ABDCA /* SavedTableViewController.swift in Sources */,
 				EAF4C16826DC39EA0046540C /* DetailViewController.swift in Sources */,
 				EAD8156526DABCD60053CF6C /* PancakeProportionsViewController.swift in Sources */,
 				EAD8159626DC2AE20053CF6C /* RecipeTableViewCell.swift in Sources */,

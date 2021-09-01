@@ -8,9 +8,13 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import CoreData
 
 
 class DetailViewController: UIViewController {
+    
+    var savedData = [Recipes]()
+    var context: NSManagedObjectContext?
         
     var webURLString = String()
     var titleString = String()
@@ -53,6 +57,15 @@ class DetailViewController: UIViewController {
         getURL(url: "https://api.spoonacular.com/recipes/\(id)/information", params: params)
     }
     
+    func saveData(){
+        do {
+            try context?.save()
+            self.basicAlert(title: "Saved!", message: "To see your saved article, go to favorites tab bar")
+        } catch  {
+            print(error.localizedDescription)
+        }
+    }
+    
 
     //#warning("App crashes and does not go to web view with reason (unrecognized sender)" )
     @IBAction func goToWebTapped(_ sender: UIButton) {
@@ -69,14 +82,29 @@ class DetailViewController: UIViewController {
         
     }
     
+
+    @IBAction func saveButtonTapped(_ sender: Any) {
+    
+        #warning("fatal error: found unexpected nil while unwrapping. WHY?")
+        let newItem = Recipes(context: self.context!)
+        newItem.recipeTitle = titleString
+        newItem.url = webURLString
+        
+        guard let imageData: Data = newsImage?.pngData() else {
+            return
+        }
+        if !imageData.isEmpty{
+            newItem.image = imageData
+        }
+        
+        self.savedData.append(newItem)
+        saveData()
+        
+        
+    }
     
    
     
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destination: WebViewController = segue.destination as! WebViewController
-//        //getURL(url: "https://api.spoonacular.com/recipes/\(id)/information", params: params)
-//        destination.urlString = "https://www.foodista.com/recipe/RHSMN38H/pancake-bites"
-//    }
+
     
 }
