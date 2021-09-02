@@ -58,10 +58,11 @@ class DetailViewController: UIViewController {
                 recipeDetailTitleLabel.text = titleString
                 detailImageView.image = newsImage
                 getURL(url: "https://api.spoonacular.com/recipes/\(id)/information", params: params)
-            #warning("crashes immediately after launching this view")
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    context = appDelegate.persistentContainer.viewContext
-            }
+//            #warning("crashes immediately after launching this view")
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                    context = appDelegate.persistentContainer.viewContext
+            
+        }
     
     
     func saveData(){
