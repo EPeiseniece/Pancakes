@@ -49,13 +49,20 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var recipeDetailTitleLabel: UILabel!
     @IBOutlet weak var detailImageView: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        recipeDetailTitleLabel.text = titleString
-        detailImageView.image = newsImage
-        getURL(url: "https://api.spoonacular.com/recipes/\(id)/information", params: params)
-    }
+        
+        
+        override func viewDidLoad() {
+                super.viewDidLoad()
+                
+                recipeDetailTitleLabel.text = titleString
+                detailImageView.image = newsImage
+                getURL(url: "https://api.spoonacular.com/recipes/\(id)/information", params: params)
+            #warning("crashes immediately after launching this view")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    context = appDelegate.persistentContainer.viewContext
+            }
+    
     
     func saveData(){
         do {
