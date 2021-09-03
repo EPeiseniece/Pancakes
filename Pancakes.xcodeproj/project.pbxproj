@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA78EAFD26E24D4000E91A94 /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78EAFC26E24D4000E91A94 /* Saved.swift */; };
 		EA78EAFF26E25CC100E91A94 /* AppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78EAFE26E25CC100E91A94 /* AppearanceViewController.swift */; };
 		EAD8156126DABCD60053CF6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8156026DABCD60053CF6C /* AppDelegate.swift */; };
 		EAD8156326DABCD60053CF6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8156226DABCD60053CF6C /* SceneDelegate.swift */; };
@@ -28,7 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA78EAFC26E24D4000E91A94 /* Saved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saved.swift; sourceTree = "<group>"; };
 		EA78EAFE26E25CC100E91A94 /* AppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceViewController.swift; sourceTree = "<group>"; };
 		EAD8155D26DABCD60053CF6C /* Pancakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pancakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD8156026DABCD60053CF6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,10 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				EAD8158A26DBBFE90053CF6C /* Model */,
+				EAD8157D26DAC1110053CF6C /* View */,
+				EAD8157C26DAC1060053CF6C /* Controller */,
 				EAD8158426DAE89A0053CF6C /* Extension */,
 				EAD8157B26DAC0FF0053CF6C /* Delegate */,
-				EAD8157C26DAC1060053CF6C /* Controller */,
-				EAD8157D26DAC1110053CF6C /* View */,
 				EAD8156C26DABCD80053CF6C /* Assets.xcassets */,
 				EAD8157126DABCD80053CF6C /* Info.plist */,
 				EAD8156926DABCD60053CF6C /* Pancakes.xcdatamodeld */,
@@ -135,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				EAD8158B26DBBFF50053CF6C /* Item.swift */,
-				EA78EAFC26E24D4000E91A94 /* Saved.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,7 +226,6 @@
 				EAD8156126DABCD60053CF6C /* AppDelegate.swift in Sources */,
 				EAD8156326DABCD60053CF6C /* SceneDelegate.swift in Sources */,
 				EAD8158326DAC77F0053CF6C /* WebViewController.swift in Sources */,
-				EA78EAFD26E24D4000E91A94 /* Saved.swift in Sources */,
 				EAD8156B26DABCD60053CF6C /* Pancakes.xcdatamodeld in Sources */,
 				EAD8158626DAE8AB0053CF6C /* Alert.swift in Sources */,
 			);
