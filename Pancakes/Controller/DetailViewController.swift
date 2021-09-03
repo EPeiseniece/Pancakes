@@ -13,7 +13,7 @@ import CoreData
 
 class DetailViewController: UIViewController {
     
-    var savedData = [Recipes]()
+    var savedData = [Items]()
     var context: NSManagedObjectContext?
         
     var webURLString = String()
@@ -93,16 +93,16 @@ class DetailViewController: UIViewController {
 
     @IBAction func saveButtonTapped(_ sender: Any) {
     
-        #warning("fatal error: found unexpected nil while unwrapping. WHY?")
-        let newItem = Recipes(context: self.context!)
-        newItem.recipeTitle = titleString
+#warning("fatal error: found unexpected nil while unwrapping. WHY?")
+        let newItem = Items(context: self.context!)
+        newItem.titles = titleString
         newItem.url = webURLString
         
         guard let imageData: Data = newsImage?.pngData() else {
             return
         }
         if !imageData.isEmpty{
-            newItem.image = imageData
+            newItem.images = imageData
         }
         
         self.savedData.append(newItem)

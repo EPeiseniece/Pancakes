@@ -9,8 +9,10 @@ import UIKit
 import CoreData
 
 class SavedTableViewController: UITableViewController {
+    @IBOutlet weak var recipeTitleLabel: UILabel!
     
-    var savedItems = [Recipes]()
+    @IBOutlet weak var recipeImageView: UIImageView!
+    var savedItems = [Items]()
     var context: NSManagedObjectContext?
     
     @IBOutlet weak var editButtonLabel: UIBarButtonItem!
@@ -47,7 +49,7 @@ class SavedTableViewController: UITableViewController {
     }
      
     func loadData(){
-        let request: NSFetchRequest<Recipes> = Recipes.fetchRequest()
+        let request: NSFetchRequest<Items> = Items.fetchRequest()
         do {
             savedItems = try (context?.fetch((request)))!
             tableView.reloadData()
@@ -84,15 +86,17 @@ class SavedTableViewController: UITableViewController {
     }
 
  
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "savedCell", for: indexPath)
+    override func tableView(_ _tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "savedCell", for: indexPath) as? RecipeTableViewCell else{
+            return UITableViewCell() }
 
         let item = savedItems[indexPath.row]
-        cell.textLabel?.text = item.recipeTitle
-        cell.textLabel?.numberOfLines = 0
+    
+        cell.recipeTitleLabel.text = item.titles
+        cell.recipeTitleLabel.numberOfLines = 0
         
-        if let image = UIImage(data: item.image!){
-            cell.imageView?.image = image
+        if let image = UIImage(data: item.images!){
+            cell.recipeImageView.image = image
 
     }
         return cell
