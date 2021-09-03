@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EAC6933426E00687000ABDCA /* SavedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6933326E00687000ABDCA /* SavedTableViewController.swift */; };
-		EAC6933626E221E7000ABDCA /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6933526E221E7000ABDCA /* SavedViewController.swift */; };
+		EA78EAFD26E24D4000E91A94 /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78EAFC26E24D4000E91A94 /* Saved.swift */; };
+		EA78EAFF26E25CC100E91A94 /* AppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78EAFE26E25CC100E91A94 /* AppearanceViewController.swift */; };
 		EAD8156126DABCD60053CF6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8156026DABCD60053CF6C /* AppDelegate.swift */; };
 		EAD8156326DABCD60053CF6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8156226DABCD60053CF6C /* SceneDelegate.swift */; };
 		EAD8156526DABCD60053CF6C /* PancakeProportionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8156426DABCD60053CF6C /* PancakeProportionsViewController.swift */; };
@@ -28,8 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EAC6933326E00687000ABDCA /* SavedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewController.swift; sourceTree = "<group>"; };
-		EAC6933526E221E7000ABDCA /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		EA78EAFC26E24D4000E91A94 /* Saved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saved.swift; sourceTree = "<group>"; };
+		EA78EAFE26E25CC100E91A94 /* AppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceViewController.swift; sourceTree = "<group>"; };
 		EAD8155D26DABCD60053CF6C /* Pancakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pancakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD8156026DABCD60053CF6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAD8156226DABCD60053CF6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,8 +109,7 @@
 				EAD8159526DC2AE20053CF6C /* RecipeTableViewCell.swift */,
 				EAD8159726DC2BE40053CF6C /* RecipeFeedViewController.swift */,
 				EAF4C16726DC39EA0046540C /* DetailViewController.swift */,
-				EAC6933326E00687000ABDCA /* SavedTableViewController.swift */,
-				EAC6933526E221E7000ABDCA /* SavedViewController.swift */,
+				EA78EAFE26E25CC100E91A94 /* AppearanceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -136,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				EAD8158B26DBBFF50053CF6C /* Item.swift */,
+				EA78EAFC26E24D4000E91A94 /* Saved.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,16 +220,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAC6933426E00687000ABDCA /* SavedTableViewController.swift in Sources */,
 				EAF4C16826DC39EA0046540C /* DetailViewController.swift in Sources */,
 				EAD8156526DABCD60053CF6C /* PancakeProportionsViewController.swift in Sources */,
 				EAD8159626DC2AE20053CF6C /* RecipeTableViewCell.swift in Sources */,
 				EAD8158C26DBBFF50053CF6C /* Item.swift in Sources */,
+				EA78EAFF26E25CC100E91A94 /* AppearanceViewController.swift in Sources */,
 				EAD8159826DC2BE40053CF6C /* RecipeFeedViewController.swift in Sources */,
-				EAC6933626E221E7000ABDCA /* SavedViewController.swift in Sources */,
 				EAD8156126DABCD60053CF6C /* AppDelegate.swift in Sources */,
 				EAD8156326DABCD60053CF6C /* SceneDelegate.swift in Sources */,
 				EAD8158326DAC77F0053CF6C /* WebViewController.swift in Sources */,
+				EA78EAFD26E24D4000E91A94 /* Saved.swift in Sources */,
 				EAD8156B26DABCD60053CF6C /* Pancakes.xcdatamodeld in Sources */,
 				EAD8158626DAE8AB0053CF6C /* Alert.swift in Sources */,
 			);

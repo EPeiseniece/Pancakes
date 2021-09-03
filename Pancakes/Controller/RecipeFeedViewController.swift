@@ -13,19 +13,36 @@ import Gloss
 class RecipeFeedViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var recipes: [RecipeModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Pancake recipes"
+        activityIndicator(animated: true)
         handleGetData()
 
         // Do any additional setup after loading the view.
     }
     
-
+    func activityIndicator(animated: Bool)  {
+        DispatchQueue.main.async {
+            if animated{
+                self.activityIndicator.isHidden = false
+                self.activityIndicator.startAnimating()
+            }else{
+                self.activityIndicator.isHidden = true
+                self.activityIndicator.stopAnimating()
+            }
+        }
+    }
    
-
+    @IBAction func infoButtonTapped(_ sender: Any) {
+        
+        basicAlert(title: "Look up Recipes", message: "In this view you can see  other recipes for inspiration and if you are interested tap on it for more info.")
+    }
+    
     func handleGetData(){
         let jsonUrl = "https://api.spoonacular.com/recipes/complexSearch?query=pancake&number=25&apiKey=235748490c7b4875a69d3e30501d9e5d"
         

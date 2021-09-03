@@ -14,13 +14,15 @@ import CoreData
 class DetailViewController: UIViewController {
     
     var savedData = [Items]()
-    var context: NSManagedObjectContext?
+    var context: NSManagedObjectContext!
         
     var webURLString = String()
     var titleString = String()
     var newsImage: UIImage?
     var id : Int = 0
+    var detailtext = String()
     let params: [String:String] = ["apiKey": "235748490c7b4875a69d3e30501d9e5d"]
+    
     
     
     
@@ -40,14 +42,28 @@ class DetailViewController: UIViewController {
     func updateURL(json: JSON){
         if let urlResult = json["sourceUrl"].string{
             webURLString = String(urlResult)
+            if let readyText = json["summary"].string{
+                detailtext = readyText
+            }else{
+                self.basicAlert(title: "Something went wrong", message: "Try again with a different recipe")
+            }
             print(urlResult)
+            print(detailtext)
         }else{
             self.basicAlert(title: "Something went wrong", message: "Try again with a different recipe")
+   
         }
+        detailTextView.text = detailtext
     }
     
     @IBOutlet weak var recipeDetailTitleLabel: UILabel!
     @IBOutlet weak var detailImageView: UIImageView!
+    @IBAction func fullArticleButton(_ sender: Any) {
+    }
+
+
+    @IBOutlet weak var detailTextView: UITextView!
+    
     
 
         
@@ -58,24 +74,16 @@ class DetailViewController: UIViewController {
                 recipeDetailTitleLabel.text = titleString
                 detailImageView.image = newsImage
                 getURL(url: "https://api.spoonacular.com/recipes/\(id)/information", params: params)
-//            #warning("crashes immediately after launching this view")
-//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                    context = appDelegate.persistentContainer.viewContext
+            
+            self.title = "Selected recipe"
             
         }
     
     
-    func saveData(){
-        do {
-            try context?.save()
-            self.basicAlert(title: "Saved!", message: "To see your saved article, go to favorites tab bar")
-        } catch  {
-            print(error.localizedDescription)
-        }
-    }
+
     
 
-    //#warning("App crashes and does not go to web view with reason (unrecognized sender)" )
+
     @IBAction func goToWebTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let vc = storyboard.instantiateViewController(identifier: "WebViewController") as? WebViewController else {
@@ -91,22 +99,7 @@ class DetailViewController: UIViewController {
     }
     
 
-    @IBAction func saveButtonTapped(_ sender: Any) {
-    
-#warning("fatal error: found unexpected nil while unwrapping. WHY?")
-        let newItem = Items(context: self.context!)
-        newItem.titles = titleString
-        newItem.url = webURLString
-        
-        guard let imageData: Data = newsImage?.pngData() else {
-            return
-        }
-        if !imageData.isEmpty{
-            newItem.images = imageData
-        }
-        
-        self.savedData.append(newItem)
-        saveData()
+
         
         
     }
@@ -115,4 +108,4 @@ class DetailViewController: UIViewController {
     
 
     
-}
+

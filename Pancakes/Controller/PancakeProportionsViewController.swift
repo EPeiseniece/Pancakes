@@ -33,6 +33,7 @@ class PancakeProportionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Calculate pancake measurements!"
     }
 
     @IBAction func sliderValueChanged(_ sender: Any) {
